@@ -1,0 +1,99 @@
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{msg}}</h1>
+        <h2>Welcome to the SharkNo Page!</h2>
+        <h5 style="color: blue;background-color: aquamarine">This site is designed to allow users to search for events of shark sightings in their area (or any area of their choosing for that matter) as well as add 
+          their own events to the database! Please click the "Enter/Search an Experience" button below to begin!
+        </h5>
+        <img id="sharkPic"/>
+        <img id="sharkGiphy"/>
+        <br/>
+        <button id="openForm">Enter/Search an Experience</button>
+        <div id="formSection" title="Search Form/Submission Form">
+        <div id="noSubmit"></div>
+          <div class="row">
+    <div class="col-3">
+      <form class="clearfix mb-4" action="POST">
+        <div class='form-group date' id='datetimepicker6'>
+          <label for="date">Date (DD/MM/YYYY)</label>
+          <input type="text" id="date" class="form-control" aria-describedby="date" placeholder="Enter date">
+        </div>
+        <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" id="year" class="form-control" aria-describedby="year" placeholder="Enter Year">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-group">
+        <label for="country">Country </label>
+        <input type="text" id="country" class="form-control" aria-describedby="country" placeholder="Enter Country">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-group">
+        <label for="area">Area (like a state) </label>
+        <input type="text" id="area" class="form-control" aria-describedby="area" placeholder="Enter Area">
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="form-group">
+        <label for="location">Location (like a city)</label>
+        <input type="text" id="location" class="form-control" aria-describedby="location" placeholder="Enter location">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="form-group">
+        <label for="activity">Activity (Standing, Surfing etc...) </label>
+        <input type="text" id="activity" class="form-control" aria-describedby="activity" placeholder="Enter activity">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label for="species">Species (White shark, Tiger shark etc..) </label>
+        <input type="text" id="species" class="form-control" aria-describedby="species" placeholder="Enter species">
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label for="type">Was the event provoked?</label>
+        <input type="text" id="type" class="form-control" aria-describedby="type" placeholder="Provoked/Unprovoked">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <div class="form-group">
+        <label for="injury">Events</label>
+        <input style="height: 200px; text-align:left;"  type="text" id="injury" class="form-control" aria-describedby="injury"
+          placeholder="Please describe the events that transpired here.">
+      </div>
+
+      <div class="form-group">
+        <label for="pdf">Please Include an Article Link for the Incident (if possible)</label>
+        <input type="text" id="pdf" class="form-control" aria-describedby="pdf" placeholder="Enter URL (like http://google.com)">
+      </div>
+      
+    </div>
+  </div>
+  </form>
+</div>
+        </div>
+        </div>
+        <div id="examplePage">
+          <h3>Examples:</h3>
+        <ul id="example-list" class="list-group">
+          {{!-- examples go here --}}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/js/index.js"></script>
