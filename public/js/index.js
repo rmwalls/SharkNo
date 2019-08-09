@@ -1,7 +1,8 @@
 //This file holds the javascript for the frontend (web pages)
 
 // Get references to page elements
-$("#formSection").hide();
+$("#formReportSection").hide();
+$("#formSearchSection").hide();
 $("#examplePage").hide();
 var $exampleList = $("#example-list");
 var $date = $("#date"); //check
@@ -17,6 +18,10 @@ var $pdf = $("#pdf");
 var arrayAll = [$date,$year,$country,$area,$location];
 var imgSrcArray = ["/img/atlantic-sharpnose-shark.jpg", "/img/great_white.jpeg", "/img/tiger_shark.png"];
 var imgSrcIndex = 0;
+var yearSearch = $("#yearSearch");
+var locationSearch = $("#locationSearch");
+var countrySearch = $("#countrySearch");
+var areaSearch = $("#areaSearch");
 
 //BELOW IS THE CODE FOR THE SHARK IMAGES FROM THE FOLDER
 var sharkPic = $("#sharkPic");
@@ -69,35 +74,31 @@ $.ajax({
 
 
 function searchAttack() {
-  var year = $year.val();
+  var year = yearSearch.val();
   if(year === ""){
     year = "imashark";
   }
-  var country = $country.val();
+  var country = countrySearch.val();
   if(country === ""){
     country = "imashark";
   }
-  var area = $area.val();
+  var area = areaSearch.val();
   if(area === ""){
     area = "imashark";
   }
-  var location = $location.val();
+  var location = locationSearch.val();
   if(location === ""){
     location = "imashark";
   }
   var routeString = "/api/attacks/" + year + "/" + country + "/" + area + "/" + location;
+  console.log(routeString);
   $.ajax(routeString, {
     type: "GET",
   }).then(function(results) {
-    $date.val("");
-    $year.val("");
-    $type.val("");
-    $country.val("");
-    $area.val("");
-    $location.val("");
-    $injury.val("");
-    $species.val("");
-    $pdf.val("");
+    yearSearch.val("");
+    areaSearch.val("");
+    countrySearch.val("");
+    locationSearch.val("");
     $('#example-list').html(results);
     $("#examplePage").show();
   });
@@ -147,18 +148,28 @@ function addAttack() {
   });
 }
 
-function startForm() {
+function startSearchForm() {
   $(function() {
-    $("#formSection").dialog({
+    $("#formSearchSection").dialog({
       width: 1000,
       buttons: [
         {
-          text: "Search",
+          text: "OK",
           click: function() {
             $(this).dialog("close");
             searchAttack();
           }
-        },
+        }
+      ]
+    })
+  })
+}
+
+function startSubmitForm() {
+  $(function() {
+    $("#formReportSection").dialog({
+      width: 1000,
+      buttons: [
         {
           text: "Submit",
           click: function() {
@@ -187,4 +198,5 @@ function startForm() {
   })
 }
 
-$("#openForm").on("click", startForm);
+$("#openSubmitForm").on("click", startSubmitForm);
+$("#openSearchForm").on("click", startSearchForm);
