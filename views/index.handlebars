@@ -1,31 +1,29 @@
+<link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
 <div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>{{msg}}</h1>
-        <h2>Welcome to SharkNo!</h2>
-        <h5 style="color: blue;background-color: aquamarine">
-          <p>We don't have anything against sharks, per se. They have their place in the food chain. We just don't want to be below them in that chain. Probably you don't either. Use our site to find out about shark sightings and attacks at the beach where you're going. Or, report what you've seen to warn others. To start, choose Search or Report. </p>
-        </h5>
-        <img id="sharkPic"/>
-        <img id="sharkGiphy"/>
+  <div class="container text-center mt-4">
+    <div class="row mt-4">
+      <div class="col-12 mt-4">
+        <h1>Welcome to SharkNo!</h1>
+          <p class="text">We don't have anything against sharks, per se. They have their place in the food chain. We just don't want to be below them in that chain. Probably you don't either. Use our site to find out about shark sightings and attacks at the beach where you're going. Or, report what you've seen to warn others. To start, choose Search or Report. </p>
+       <a href="https://www.ocearch.org/tracker/?list" class="mt-4" style="  text-decoration: none;
+">Track shark by this link</a>
         <br/>
-        <button id="openSubmitForm">Report</button>
-        <button id="openSearchForm">Search</button>
-        <div id="formReportSection" title="Submission Form">
+         <br/>
+        <button id="openSubmitForm" class="btns" >Report</button>
+        <button id="openSearchForm" 
+>Search</button>
+        <div id="formReportSection" title="Submission Form" style=" font-family: 'Fredoka One', cursive;">
         <div id="noSubmit"></div>
-          <div class="row">
+          <div class="row align-middle">
     <div class="col-3">
       <form class="clearfix mb-4" action="POST">
         <div class='form-group date' id='datetimepicker6'>
           <label for="date">Date (DD/MM/YYYY)</label>
           <input type="text" id="date" class="form-control" aria-describedby="date" placeholder="Enter date">
         </div>
-        <div class="form-group">
-        <label for="year">Year</label>
-        <input type="text" id="year" class="form-control" aria-describedby="year" placeholder="Enter Year">
-      </div>
-    </div>
+        </div>
     <div class="col-3">
       <div class="form-group">
         <label for="country">Country </label>
@@ -46,19 +44,25 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
+     <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" id="year" class="form-control" aria-describedby="year" placeholder="Enter Year">
+      </div>
+    </div>
+    <div class="col-3">
       <div class="form-group">
-        <label for="activity">Activity (Standing, Surfing etc...) </label>
+        <label for="activity">Activity (Surfing etc...) </label>
         <input type="text" id="activity" class="form-control" aria-describedby="activity" placeholder="Enter activity">
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-3">
       <div class="form-group">
-        <label for="species">Species (White shark, Tiger shark etc..) </label>
+        <label for="species">Species (Tiger shark etc..) </label>
         <input type="text" id="species" class="form-control" aria-describedby="species" placeholder="Enter species">
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-3">
       <div class="form-group">
         <label for="type">Was the event provoked?</label>
         <input type="text" id="type" class="form-control" aria-describedby="type" placeholder="Provoked/Unprovoked">
@@ -82,7 +86,7 @@
   </div>
   </form>
 </div>
-<div id="formSearchSection" title="Search Form">
+<div id="formSearchSection" title="Search Form" style=" font-family: 'Fredoka One', cursive;">
           <div class="row">
     <div class="col-6">
       <form class="clearfix mb-4" action="POST">
@@ -117,8 +121,8 @@
         </div>
         </div>
         <div id="examplePage">
-          <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
+          <h3 class="mt-3">Reports :</h3>
+        <ul id="example-list" class="list-group" >
           {{!-- examples go here --}}
         </ul>
         </div>
@@ -126,7 +130,14 @@
     </div>
   </div>
 </div>
-
+<div class="footer" style="font-size: 30px;">
+<p>| 
+<span><a class="gitlink"href="https://github.com/dziubliukbm"><img src="/img/git.png" style="height: 40px; width:40px;"> Bohdan Dziubliuk</a>  | </span>
+<span><a class="gitlink" href="https://github.com/smrogers93"><img src="/img/git.png" style="height: 40px; width:40px;"> Steve Rogers</a>  | </span>
+<span><a class="gitlink" href="https://github.com/BlasteriskVon"><img src="/img/git.png" style="height: 40px; width:40px;"> Andrew Vaughns</a>  | </span>
+<span><a class="gitlink" href="https://github.com/rmwalls"><img src="/img/git.png" style="height: 40px; width:40px;"> Robbi Walls</a>  |</span>
+</p>
+</div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="/js/index.js"></script>
