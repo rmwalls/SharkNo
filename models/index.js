@@ -1,3 +1,5 @@
+//I think we don't need this file since we aren't using sequelize
+
 "use strict";
 
 var fs = require("fs");

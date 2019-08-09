@@ -1,3 +1,4 @@
+//This file holds database log in info
 module.exports = {
   "development": {
     "username": "root",

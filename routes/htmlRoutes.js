@@ -1,3 +1,5 @@
+//This file also seems to be related to sequelize. should we delete it?
+
 var db = require("../models/example.js");
 
 module.exports = function(app) {

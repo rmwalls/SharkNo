@@ -1,3 +1,4 @@
+//This file starts the web server
 var express = require("express");
 
 var PORT = process.env.PORT || 8080;
