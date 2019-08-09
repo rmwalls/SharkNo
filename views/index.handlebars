@@ -10,8 +10,9 @@
         <img id="sharkPic"/>
         <img id="sharkGiphy"/>
         <br/>
-        <button id="openForm">Enter/Search an Experience</button>
-        <div id="formSection" title="Search Form/Submission Form">
+        <button id="openSubmitForm">Report</button>
+        <button id="openSearchForm">Search</button>
+        <div id="formReportSection" title="Submission Form">
         <div id="noSubmit"></div>
           <div class="row">
     <div class="col-3">
@@ -77,6 +78,38 @@
         <input type="text" id="pdf" class="form-control" aria-describedby="pdf" placeholder="Enter URL (like http://google.com)">
       </div>
       
+    </div>
+  </div>
+  </form>
+</div>
+<div id="formSearchSection" title="Search Form">
+          <div class="row">
+    <div class="col-6">
+      <form class="clearfix mb-4" action="POST">
+        <div class="form-group">
+        <label for="yearSearch">Year</label>
+        <input type="text" id="yearSearch" class="form-control" aria-describedby="yearSearch" placeholder="Enter Year">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="countrySearch">Country </label>
+        <input type="text" id="countrySearch" class="form-control" aria-describedby="countrySearch" placeholder="Enter Country">
+      </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="areaSearch">Area (like a state) </label>
+        <input type="text" id="areaSearch" class="form-control" aria-describedby="areaSearch" placeholder="Enter Area">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="locationSearch">Location (like a city)</label>
+        <input type="text" id="locationSearch" class="form-control" aria-describedby="locationSearch" placeholder="Enter location">
+      </div>
     </div>
   </div>
   </form>
