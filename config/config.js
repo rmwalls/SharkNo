@@ -3,7 +3,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": process.env.mysqlPassword,
-    "database": "exampledb",
+    "database": "d0h81wtddmdymv4o",
     "host": "localhost",
     "dialect": "mysql"
   },
@@ -17,6 +17,7 @@ module.exports = {
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": false
   }
 }
