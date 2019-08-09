@@ -1,3 +1,5 @@
+//This appears to be a file for use with Sequelize but maybe we just need to remove line 4
+
 var db = require("../models/example.js");
 var Op = db.Sequelize.Op;
 

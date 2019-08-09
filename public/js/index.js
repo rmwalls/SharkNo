@@ -1,3 +1,5 @@
+//This file holds the javascript for the frontend (web pages)
+
 // Get references to page elements
 $("#formSection").hide();
 $("#examplePage").hide();

@@ -1,3 +1,4 @@
+//This is the ORM file that interacts with the database
 var connection = require("../config/connection.js");
 
 var orm = {
@@ -25,7 +26,7 @@ var orm = {
             }
         }
         var queryString = "SELECT * FROM " + table + conditionString + ";";
-        console.log(queryString);
+        //console.log(queryString);
         connection.query(queryString, function(err, result){
             if(err) throw err;
             func(result);
