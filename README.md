@@ -32,6 +32,7 @@
 * MySQL and home made ORM
 * GET and POST routes
 * jquery ui
+* Handlebars
 * MVC folder/file structure
 * Polished UI, Quality Coding Standards (ESlint, Beautify)
 * env for MySQL key
