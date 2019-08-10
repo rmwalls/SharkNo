@@ -53,9 +53,13 @@ router.get("/api/attacks/:year/:country/:area/:location", function (req, res) {
 
     sharkAttacks.take(traitParamsArray, traitArray, function (results) {
         console.log(results);
+        var resultsArray = [];
+        for(var i = 0;i < 7;i++){
+            resultsArray.push(results[i]);
+        } //should be an array of 5 results
         res.render("partials/results", {
             layout: false,
-            examples: results
+            examples: resultsArray
         });
     });
 });
