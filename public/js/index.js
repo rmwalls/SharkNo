@@ -5,15 +5,15 @@ $("#formReportSection").hide();
 $("#formSearchSection").hide();
 $("#examplePage").hide();
 var $exampleList = $("#example-list");
-var $date = $("#date"); //check
-var $year = $("#year"); //need to add
-var $country = $("#country");//check
-var $area = $("#area");//check
-var $location = $("#location");//check
-var $activity = $("#activity");//check
-var $species = $("#species");//check
-var $type = $("#type");//check
-var $injury = $("#injury");//check
+var $date = $("#date"); 
+var $year = $("#year"); 
+var $country = $("#country");
+var $area = $("#area");
+var $location = $("#location");
+var $activity = $("#activity");
+var $species = $("#species");
+var $type = $("#type");
+var $injury = $("#injury");
 var $pdf = $("#pdf");
 var arrayAll = [$date,$year,$country,$area,$location];
 var imgSrcArray = ["/img/atlantic-sharpnose-shark.jpg", "/img/great_white.jpeg", "/img/tiger_shark.png"];
