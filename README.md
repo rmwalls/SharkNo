@@ -38,4 +38,4 @@
 * env for MySQL key
 * Deployed on Heroku
 
-<img scr="/public/img/shark_screen1.jpg" alt="application screenshot">
+![application screenshot](/public/img/shark_screen1.jpg)
